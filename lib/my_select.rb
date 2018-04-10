@@ -3,9 +3,10 @@ def my_select(collection)
    i = 0
    newarr = []
    while i < collection.length
-     collection.select do |ele|
-      newarr << yield(collection[i])
-       i += 1
+     if yield(collection[i]) == true
+       newarr << collection[i]
+     end
+      i += 1
     end
     newarr
  end
