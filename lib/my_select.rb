@@ -7,5 +7,6 @@ def my_select(collection)
       newarr << yield(collection[i])
        i += 1
     end
+    newarr
  end
 end
